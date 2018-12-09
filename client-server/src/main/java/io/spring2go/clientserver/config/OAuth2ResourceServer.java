@@ -1,4 +1,4 @@
-package io.spring2go.authcodeserver.config;
+package io.spring2go.clientserver.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -6,12 +6,12 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 
 /**
- * 资源服务器
+ * 资源服务器配置
+ * 注：有些项目会将{资源服务器}和{授权服务器}分开部署，但本demo将他们放在一起
  */
 @Configuration
 @EnableResourceServer
 public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter {
-
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
@@ -19,8 +19,6 @@ public class OAuth2ResourceServer extends ResourceServerConfigurerAdapter {
                 .authenticated()
                 .and()
                 .requestMatchers()
-                //对"/api/**"下面的api，进行Oath2进行认证，即，访问下面api时，必须带着token过来
                 .antMatchers("/api/**");
     }
-
 }

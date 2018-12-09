@@ -1,6 +1,9 @@
 基于授权码模式+Spring Security OAuth2的最简授权服务器
-======
 
+======
+参考博客：https://blog.csdn.net/Victor_An/article/details/81510874
+源码解析：https://blog.csdn.net/j754379117/article/details/70176974          https://my.oschina.net/jast90/blog/311862
+官方文档：https://docs.spring.io/spring-security/oauth/
 # 操作方式
 
 ### 1. 获取授权码

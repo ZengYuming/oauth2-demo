@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.spring2go</groupId>
-    <artifactId>authcode-server</artifactId>
+    <artifactId>client-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>authcode-server</name>
+    <name>client-server</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -53,7 +53,8 @@
             <groupId>org.springframework.security.oauth</groupId>
             <artifactId>spring-security-oauth2</artifactId>
         </dependency>
-        <!-- End for OAuth 2.0 -->
+        <!--End for OAuth 2.0-->
+        <!--Begin for test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -64,6 +65,7 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--End for test-->
     </dependencies>
 
     <build>
@@ -74,6 +76,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
